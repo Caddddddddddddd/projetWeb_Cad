@@ -3,7 +3,7 @@
     background-color: aquamarine;
 }
 
-.overlay{
+ .overlay{
     position: absolute;
     top: 0;
     left:0;
@@ -13,7 +13,7 @@
     background: url('image_fond.jpg') center center no-repeat;
     background-size: cover;
     z-index:-100;
-}
+} 
 .nav
 {
     display: flex;
@@ -24,4 +24,11 @@
 .nav a {
     text-decoration: none;
     margin: 0 10px; /* Espacement horizontal entre les navlinks */
-   
+
+}
+
+.carousel-item active
+{
+    height:32rem;
+    background: #777;
+}
