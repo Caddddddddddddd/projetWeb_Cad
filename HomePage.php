@@ -27,5 +27,16 @@
      <div class="overlay">
 
      </div>
+    <section class="apropos" id="apropos">
+        <div>
+            <div class="col-8">
+                <h2><span>A<span> Propos de Nous</h2>
+                <p>ghfhghjhkfgvbhjkgf</p>
+            </div>
+    
+        </div>
+</section>
+    
+
 </body>
 </html>
