@@ -5,7 +5,7 @@ include('base.html.php');
 ?>
 
   <!-- block title -->
-{% block title %}Hello AuthentificationController!{% endblock %}
+Hello AuthentificationController!
 
  <!-- block body -->
 

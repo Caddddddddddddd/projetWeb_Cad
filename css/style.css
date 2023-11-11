@@ -32,3 +32,281 @@
     height:32rem;
     background: #777;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top-navbar{
+    width: 100%;
+    height:7vh;
+    background-color: #e45d5d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-icons{
+    margin-left: 45px;
+}
+
+.other-links
+{
+    margin-right: 33px;
+}
+.other-links i{
+    color: #1c1c50;
+    font-size: 20px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+#btn-login{
+    width: 100px;
+    border: 2px solid #1c1c50;
+    color: #1c1c50;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 5ch;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn-login a{
+    text-decoration: none;
+    color: #1c1c50;
+    transition: 0.5s ease;
+}
+
+#btn-login a:hover{
+    background-color:#a1a1c7;
+    color:white;
+
+}
+#btn-login:hover{
+    background-color:#a1a1c7;
+    color:white;
+}
+
+#btn-signup{
+    width: 100px;
+    border: 2px solid #1c1c50;
+    color: #1c1c50;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 5ch;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn-signup a{
+    text-decoration: none;
+    color: #1c1c50;
+    transition: 0.5s ease;
+}
+
+#btn-signup a:hover{
+    background-color:#a1a1c7;
+    color:white;
+
+}
+#btn-signup:hover{
+    background-color:#a1a1c7;
+    color:white;
+}
+
+.home-section{
+    width:100%;
+    height: 93vh;
+    background-color: #a9a9a926;
+}
+#navbar{
+    background-color: #a1a1c7;
+    font-size: 16px;
+
+}
+#navbar .nav-link{
+color: white;
+font-weight: bold;
+margin-left: 30px;
+transition: 0.5s ease;
+}
+
+#navbar .nav-link:hover{
+    color:white;
+    border-radius: 5px;
+    
+}
+#search-btn{
+    color:white;
+    border: 1px solid white;
+}
+#search-btn:hover{
+background-color:#1c1c50 ;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+
+}
+.home .img{
+    flex: 1 1 400px;
+}
+.home .img img{
+    width: 100px;
+}
+.home .content{
+    flex: 1 1 400px;
+    margin-top: 30px;
+}
+.content h3{
+    margin-left: 70px;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px black;
+    color: #1c1c50;
+    font-weight: bold;
+}
+.content h3 span{
+    font-size 40px;;
+}
+.content p{
+     margin-left: 70px;
+     color:#1c1c50;
+}
+.content #shopnow{
+    margin-left: 70px;
+    width: 200px;
+    height: 38px;
+    border: 2px solid #1c1c50;
+    font-weight: bold;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.content #shopnow:hover{
+    background-color: #1c1c50;
+    color: white;
+    
+}
+
+#top-cards{
+    margin-top: 30px;
+    
+}
+#top-cards .card img{
+    height: 60vh;
+}
+#top-cards h5{
+    color: #1c1c50;
+    font-weight: bold;
+
+}
+.banner{
+    width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(clash_royal.jpg);
+}
+.banner .content{
+    text-align: center;
+    padding-top: 100px;
+}
+.banner .content h1{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 3px;
+}
+.banner .content p{
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 3px;
+}
+#bannerbtn button{
+    width:150px;
+    height: 38px;
+    background: transparent;
+    color:white;
+    border: 2px solid white;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#bannerbtn button:hover{
+    background-color: #1c1c50;
+    border: none;
+}
+#footer{
+    padding: 0 0 30px 0;
+    color:#d0d0d0;
+    font-size:14px;
+    background:#1c1c50;
+    
+}
+#footer .footer-top{
+    padding: 60px 0 30px;
+    background:#1c1c50;
+    color:white;
+
+}
+#footer .footer-top .footer-contact h3{
+    color:white;
+    text-shadow:1px 1px 1px black;
+}
+#footer .footer-top .footer-contact h4{
+    font-size:22px;
+    margin:0 0 300px 0;
+    padding:2px 0 2px 0;
+    line-height:1;
+    font-weight:700;
+}
+#footer .footer-top .footer-contact p{
+    font-size:14px;
+    margin:0 ;
+    color:white;
+    padding:2px 0 2px 0;
+    line-height:1;
+    font-weight:700;
+}
+#footer .footer-top h4{
+    font-size:15px;
+    font-weight:bold;
+    position:relative;
+    padding-bottom:12px;
+}
+#footer .footer-top .footer-links ul{
+    list-style:none;
+    padding: 0;
+    margin:0;
+
+}
+#footer .footer-top .footer-links ul li{
+    padding-right: 10px 0;
+    display:flex;
+    align-items: center;
+    
+
+}
+#footer .footer-top .footer-links ul li:first-child{
+    padding: 0;
+}
+#footer .footer-top .footer-links um li a{
+    color:white;
+    line-height: 2;
+}
+#footer .footer-top.socail-links a{
+    font-size: 18px;
+    display:inline-block;
+    color: white;
+    line-height: 1;
+    padding-right: 50px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.5s ease;
+}
+#footer .copyright{
+    text-align: center;
+    float:left;
+}
