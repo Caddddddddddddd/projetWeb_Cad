@@ -21,9 +21,9 @@
 </head>
 <body>
     
-    <?php
-    include('navbar.html');
-    ?>
+    
+
+    
     
     <!-- Menu de navigation -->
     
@@ -40,7 +40,9 @@
 
         include('connection.php');
         global $db;
-
+        $options = [
+            'cost' => 12,
+            ];
         
 
 
@@ -61,14 +63,15 @@
                      $cdpassword = $_POST['cdpassword'];
                 
                if($passwords == $cdpassword){
-                echo $email;
-                echo $pseudo;
-                $q = $db->prepare("INSERT INTO tablemembre(pseudo,email,passwords) VALUES(:pseudo,:email,:passwords)");
+                
+                $q = $db->prepare("INSERT INTO tablemembre(pseudo,email,passwords,privilege) VALUES(:pseudo,:email,:passwords,:privilege)");
                 $q->execute([
                   'pseudo' => $pseudo,
                  'email' => $email,
-                 'passwords' => password_hash($_POST['passwords'], PASSWORD_DEFAULT)
+                 'passwords' => password_hash($passwords, PASSWORD_BCRYPT, $options),
+                 'privilege' => "membre"
                  ]);  
+                 //$password = ;
                 echo" Vous etes inscrit : ".$_POST['pseudo'];
 
                } else {

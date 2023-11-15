@@ -11,8 +11,8 @@
         $req->execute([$username]);
         $user = $req->fetch(); 
     echo $user['pseudo'];
-
-    if ($user && $password==$user['passwords']) {
+//(password_verify($password,$row["password"])
+    if (password_verify($password,$user["passwords"])) {
        
         if ($user['privilege'] == "admin") {
             session_start();
