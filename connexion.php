@@ -1,4 +1,5 @@
 <?php
+//Debut 
 if (isset($_POST['envoyer'])) {
 
     $bdd = new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8', 'root', '');
