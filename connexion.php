@@ -13,7 +13,7 @@ if (isset($_POST['envoyer'])) {
 
     if ($user && $password==$user['mdp'] && $user['role'] == "membre" ) {
        
-
+ 
         // Redirigez l'utilisateur vers la page d'accueil des membres
         header('Location: accueilMembre.php');
         exit();
