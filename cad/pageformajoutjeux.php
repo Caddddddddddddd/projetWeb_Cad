@@ -12,7 +12,7 @@
     ?>
 <div class="container">
 <h1>Ajout d'un Jeux </h1>
-<form  method="POST" action="tt_jeux.php" enctype="multipart/form-data">
+<form  method ="post" action="traitementAjoutjeux.php" enctype="multipart/form-data">
     <div class="container">
     <div class="row my-3">
        <div class="row">
@@ -33,8 +33,8 @@
         </div>
 
         <div class="col-md-6">
-            <label for="imagejeux" class="form-label">Images du jeux</label>
-            <input type="text" class="form-control " id="imagejeux" name="imagejeux" placeholder="Images du jeux..." required>
+            <label class="form-label">Images du jeux</label>
+            <input type="file" name="imagejeux" class="form-control" required>
         </div>
 
         <div class="col-md-6">
@@ -45,7 +45,12 @@
 
        </div>
         <div class="row my-3">
-        <div class="d-grid gap-2 d-md-block"><button class="btn btn-outline-primary" type="submit">Ajouter</button></div>   
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-outline-primary" name ="formsend1" type="submit">
+                Ajouter
+
+            </button>
+        </div>   
         </div>
     </div>
 </form>
