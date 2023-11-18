@@ -1,6 +1,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+ 
 }
 
 html {
@@ -15,6 +16,7 @@ main {
   max-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
+  
 }
 
 .b-example-divider {
@@ -87,3 +89,11 @@ main {
 
 .fw-semibold { font-weight: 600; }
 .lh-tight { line-height: 1.25; }
+
+
+
+
+.body {
+  height: 100vh; /* Assurez-vous que la barre latérale occupe 100% de la hauteur */
+  overflow-y: auto; /* Pour activer le défilement si nécessaire */
+}
