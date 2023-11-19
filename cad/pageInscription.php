@@ -11,7 +11,7 @@
 <html lang="en">
 <html>
 <head>
-    <title>Titre</title>
+    <title>Inscription</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
@@ -21,21 +21,58 @@
 </head>
 <body>
     
-    
 
-    
-    
+
+<?php
+    require 'navbar.html';
+    ?>
+    <h2>Inscription</h2>
     <!-- Menu de navigation -->
     
-    <form action="" method = "post">
+    <!-- <form action="" method = "post">
         <input type="text" name="pseudo"id="pseudo" placeholder = "Votre nom" required><br/>
         <input type="email" name="email" id = "email" placeholder = "Votre mail" required><br/>
         <input type="password" name="passwords" id = "passwords" placeholder = "Votre mot de passe" required><br/>
         <input type="password" name="cdpassword" id = "cdpassword" placeholder = "Confirmation mot de passe" required> <br/>       
         <input type="submit" name="formsend" id = "formsend">
 
-    </form>
+    </form> -->
+    <form  method ="post" action="" enctype="multipart/form-data">
+    <div class="container">
+    <div class="row my-3">
+       <div class="row">
 
+        <div class="col-md-6">
+            <label for="nom" class="form-label">Nom </label>
+            <input type="text" class="form-control " id="pseudo" name="pseudo" placeholder="Votre nom...." required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control " id="email" name="email" placeholder="Votre email..." required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="motdepasse" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control " id="passwords" name="passwords" placeholder="Mot de passe..." required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="motdepasse" class="form-label">Confirmation Mot de passe</label>
+            <input type="password" class="form-control " id="cdpassword" name="cdpassword" placeholder="Mot de passe..." required>
+        </div>
+
+       </div>
+        <div class="row my-3">
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-outline-primary" id = "formsend" name ="formsend" type="submit">
+                Ajouter
+
+            </button>
+        </div>   
+        </div>
+    </div>
+</form>
     <?php
 
         include('connection.php');
@@ -84,7 +121,7 @@
             
          }
            else {
-                echo"Probleme";
+              //  echo"Probleme";
                 }
     ?>
     

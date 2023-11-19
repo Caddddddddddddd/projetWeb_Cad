@@ -34,16 +34,17 @@
                 
                
                 
-                $q = $db->prepare("INSERT INTO jeux(nom_jeux, descriptions, categorie, regles) VALUES(:nomjeux, :descriptions, :categorie, :regles)");
+                $q = $db->prepare("UPDATE  jeux SET nom_jeux = :nomjeux, descriptions = :descriptions, categorie = :categorie, regles = :regles WHERE id_jeux = :id_jeux");
                 $q->execute([
                   'nomjeux' => $nomjeux,
                  'descriptions' => $descriptions,
                  'categorie' => $categorie,
-                 'regles' => $regles
+                 'regles' => $regles,
+                 'id_jeux' => 
                  ]);  
                  $id_jeux = $db->lastInsertId(); // Récupérer l'ID du jeu inséré
 
-                 $q1 = $db->prepare("INSERT INTO imagejeux(images, id_jeux_images) VALUES(:images, :idjeuximages)");
+                 $q1 = $db->prepare("UPDATE  imagejeux SET(images, id_jeux_images) VALUES(:images, :idjeuximages)");
                 $q1->execute([
                   'images' => $images,
                  'idjeuximages' => $id_jeux

@@ -11,8 +11,8 @@
     require 'navbar.html';
     ?>
 <div class="container">
-<h1>Ajout d'un Jeux </h1>
-<form  method ="post" action="traitementAjoutjeux.php" enctype="multipart/form-data">
+<h1>Modification d'un Jeux </h1>
+<form  method ="post" action="traitementUpdatejeux.php" enctype="multipart/form-data">
     <div class="container">
     <div class="row my-3">
        <div class="row">

@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,500&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <title>Document</title>
-  connexion
+  <title>Page de connexion</title>
+  
 </head>
 
 <body>
-  
+<?php
+    require 'navbar.html';
+    ?>
   <div class="PagedeConnection">
     <div class="enregistrement" id="formulaire">
       <h2 class="Titre_Formulaire">Formulaire</h2>
@@ -41,7 +43,7 @@
       </div>
     </div>
     <div class="separator"></div>
-    <a href="nouveauMembre.html">Vous n'avez pas de compte ?</a>
+    <a href="pageInscription.php">Vous n'avez pas de compte ?</a>
 
 </body>
 </html>
