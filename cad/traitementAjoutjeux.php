@@ -52,7 +52,7 @@
                 echo" Jeu enregistré : ".$_POST['nomjeux'];                
              }
 
-            
+           
          }
            else {
                 echo"Probleme";

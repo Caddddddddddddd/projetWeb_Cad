@@ -81,7 +81,7 @@
                 
              }
 
-            
+             header('Location: listadmin.php');
          }
            else {
                 echo"Probleme";

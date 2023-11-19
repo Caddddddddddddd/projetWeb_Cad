@@ -1,0 +1,55 @@
+<?php
+$titre = "Administrateur";
+include 'header.inc.php';
+include 'menuadmin.php';
+include 'connection.php';
+?>
+
+<div class="container">
+    <h1>Contenu</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID Jeux</th>
+                <th scope="col">Nom Jeux</th>
+                <th scope="col">Descriptions</th>
+                <th scope="col">Categorie</th>
+                <th scope="col">Regles</th>
+                <th scope="col">Images</th>
+                <th scope="col">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php
+            global $db;
+            $i = 1;
+
+            // Utilisation de "ORDER BY" pour ordonner les résultats par ID membre
+            $req = $db->prepare("SELECT * FROM jeux ORDER BY id_jeux");
+            $req->execute();
+
+            $req1 = $db->prepare("SELECT * FROM imagejeux ORDER BY id_imagejeux");
+            $req1->execute();
+
+            while ($user = $req->fetch() && $user1 = $req1->fetch()) {
+                echo '<tr>';
+                echo '<th scope="row">' . $i . '</th>';
+                echo '<td>' . $user['id_jeux'] . '</td>';
+                echo '<td>' . $user['nom_jeux'] . '</td>';
+                echo '<td>' . $user['descriptions'] . '</td>';
+                echo '<td>' . $user['categorie'] . '</td>';
+                echo '<td>' . $user['regles'] . '</td>';
+                echo '<td>' . $user1['images'] . '</td>';
+                echo '<td><a href="deletejeux.php?idjeux=' . $user['id_jeux'] . '" >Supprimer</a></td>';
+                echo '<td><a href="deletejeux.php?idjeux=' . $user['id_jeux'] . '" >Supprimer</a></td>';
+                echo '</tr>';
+                $i++;
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
