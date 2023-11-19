@@ -1,3 +1,3 @@
 <?php
-    require 'sidebar.php';
+    require ('sidebar.php');
 ?>

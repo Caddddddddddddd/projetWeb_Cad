@@ -2,22 +2,14 @@
   <?php
 
 // Connexion :
-require 'connection.php';
+require ('../cad/connection.php');
 
-$ps = $db->prepare("SELECT * FROM creneau");
+$ps = $db->prepare("SELECT id_jeux,nom_jeux FROM jeux ");
 
 $ps->execute();
-$ps->bind_result($id_creneau, $date, /* autres colonnes de votre table */);
+$resultats = $ps->fetchAll(PDO::FETCH_ASSOC);
 
-$rows = array();
-while ($ps->fetch()) {
-    $row = array(
-        'id_creneau' => $id_creneau,
-        'date' => $date,
-        // autres colonnes de votre table
-    );
-    $rows[] = $row;
-}
+$ps1 = $db->prepare("SELECT jeux.nom_jeux,creneau.date FROM jeux INNER JOIN creneau on (jeux.id_jeux=creneau.id_jeux_creneau) WHERE jeux.id_jeux = :idJeu");
 
 
 

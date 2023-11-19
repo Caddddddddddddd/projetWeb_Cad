@@ -11,10 +11,10 @@
         <?php
             try {
                 // Connexion à la base de données avec PDO
-                require 'cad/connection.php'
-                
+                require ('cad/connection.php');
+               
                 // Requête SQL pour récupérer les données de la table
-                $requete = "SELECT id_creneau, date FROM creneau";
+                $requete = "SELECT * FROM creneau";
                 
                 // Préparer la requête
                 $stmt = $db->prepare($requete);
