@@ -11,8 +11,8 @@ global $db;
 $options = [
     'cost' => 12,
 ];
-
-echo "0";
+$chainejeux="../images/";
+$chaineregles="../regles_jeux/";
 
 echo "1";
 
@@ -23,8 +23,8 @@ $q->execute();
 $result = $q->fetch(PDO::FETCH_ASSOC);
 
 // Si le chemin du fichier existe, on le supprime
-if ($result && file_exists($result['regles'])) {
-    unlink($result['regles']);
+if ($result && file_exists($chaineregles.$result['regles'])) {
+    unlink($chaineregles.$result['regles']);
 }
 
 $q->closeCursor();
@@ -36,11 +36,17 @@ $q1->execute();
 $result1 = $q1->fetch(PDO::FETCH_ASSOC);
 
 // Si le chemin du fichier existe, on le supprime
-if ($result1 && file_exists($result1['images'])) {
-    unlink($result1['images']);
+if ($result1 && file_exists($chainejeux.$result1['images'])) {
+    unlink($chainejeux.$result1['images']);
 }
 
 $q1->closeCursor();
+/* echo "Chemin du fichier jeu : " . $chaineregles.$result['regles'] . "<br>";
+echo "Chemin du fichier imagejeux : " . $chaineregles.$result1['images'] . "<br>";
+echo "Chemin du fichier imagejeux : " . $result1 && file_exists($result1['images']) . "<br>";
+
+var_dump($result);
+var_dump($result1); */
 
 // Suppression du jeu de la base de données
 $q_delete = $db->prepare("DELETE FROM jeux WHERE id_jeux=?");
@@ -54,6 +60,6 @@ $q1_delete->bindParam(1, $id, PDO::PARAM_INT);
 $q1_delete->execute();
 $q1_delete->closeCursor();
 
-echo "Jeu supprimé avec succès : " . $_POST['nomjeux'];
+//echo "Jeu supprimé avec succès : " . $_POST['nomjeux'];
 header("location:list.php");
 ?>

@@ -19,15 +19,20 @@
                      $nomjeux = $_POST['nomjeux'];
                      $descriptions = $_POST['description'];
                      $categorie = $_POST['categorie'];
-                     $userfile = $_FILES['userfile']['tmp_name'];
+                     
+                     $userfile = $_FILES['userfile']['name'];
+                     $fichierTempuserfile=$_FILES['userfile']['tmp_name'];//recupérer le nom du fichier temporaire téléchargé sur le serveur.
+                     move_uploaded_file($fichierTempuserfile,'../regles_jeux/'.$userfile);
 
-
-                     $imagejeuxs = $_FILES['imagejeux']["tmp_name"];
+                     $imagejeux = $_FILES['imagejeux']['name'];
+                     $fichierTempimagesjeux=$_FILES['imagejeux']['tmp_name'];//recupérer le nom du fichier temporaire téléchargé sur le serveur.
+                     move_uploaded_file($fichierTempimagesjeux,'../images/'.$imagejeux);
                      $idjeuximages = "1";
 
 
-                     $regles = file_get_contents($userfile, FILE_BINARY);
-                     $images = file_get_contents($imagejeuxs,  FILE_BINARY);
+                     /* $regles = file_get_contents($userfile, FILE_BINARY);
+                     $images = file_get_contents($imagejeuxs,  FILE_BINARY); */
+
 
 
 
@@ -39,17 +44,18 @@
                   'nomjeux' => $nomjeux,
                  'descriptions' => $descriptions,
                  'categorie' => $categorie,
-                 'regles' => $regles
+                 'regles' => $userfile
                  ]);  
                  $id_jeux = $db->lastInsertId(); // Récupérer l'ID du jeu inséré
 
                  $q1 = $db->prepare("INSERT INTO imagejeux(images, id_jeux_images) VALUES(:images, :idjeuximages)");
                 $q1->execute([
-                  'images' => $images,
+                  'images' => $imagejeux,
                  'idjeuximages' => $id_jeux
                  ]);  
                  //$password = ;
-                echo" Jeu enregistré : ".$_POST['nomjeux'];                
+                echo" Jeu enregistré : ".$_POST['nomjeux'];      
+                header("location:list.php");         
              }
 
            
