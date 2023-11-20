@@ -107,7 +107,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="accueilMembre.php" class="nav-link active" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Home
         </a>
@@ -125,7 +125,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="liste_jeux.php" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
           Products
         </a>

@@ -12,9 +12,9 @@
         $user = $req->fetch(); 
     echo $user['pseudo'];
 //(password_verify($password,$row["password"])
-    if (password_verify($password,$["passwords"])) {
-       user
-        if ($user['privilege'] == "admin") {
+    if (password_verify($password,$user["passwords"])) {
+       
+        if($user['privilege'] == "admin"){
             session_start();
             $_SESSION['privilege'] == "admin";
             header('Location: acceuilAdmin.php');
