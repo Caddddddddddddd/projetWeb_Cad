@@ -17,11 +17,15 @@
         if($user['privilege'] == "admin"){
             session_start();
             $_SESSION['privilege'] == "admin";
+            $_SESSION['id_membre'] = $user['id_membre'];
+            
+
             header('Location: acceuilAdmin.php');
             exit();
         }elseif($user['privilege'] == "membre"){
             session_start();
             $_SESSION['privilege'] == "membre";
+            $_SESSION['id_membre'] = $user['id_membre'];
             header('Location: ../membre/accueilMembre.php');
         exit();
         }     

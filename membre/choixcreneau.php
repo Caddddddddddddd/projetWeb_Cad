@@ -6,16 +6,17 @@
 <div class="container">
 <h1>Liste des créneaux</h1>
 
-<form>
+<form method="post" action="traitement_inscription_creneau.php">
 
 
-<select class="form-select" aria-label="Default select example">
+<select class="form-select" name="creneau" aria-label="Default select example">
 <?php
     require ('selectioncreneau.php');
 
  
     foreach ($resultats as $row) {
-                    
+        $idJeu = $row["id_jeux"];
+
         echo "<optgroup label='" . $row["nom_jeux"] . "'>" ;
     
         
@@ -29,10 +30,16 @@
 }
 
     echo "</optgroup>";
+   
 }
-echo $row["id_jeux"];
+
+
+//echo $row["id_jeux"];
 ?>
 </select>
+<input type="submit" name="inscrire" class="btn btn-success">
+
+
 </form>
 
 </div>

@@ -23,7 +23,7 @@
                      $userfile = $_FILES['userfile']['name'];
                      $fichierTempuserfile=$_FILES['userfile']['tmp_name'];//recupérer le nom du fichier temporaire téléchargé sur le serveur.
                      move_uploaded_file($fichierTempuserfile,'../regles_jeux/'.$userfile);
-
+                   
                      $imagejeux = $_FILES['imagejeux']['name'];
                      $fichierTempimagesjeux=$_FILES['imagejeux']['tmp_name'];//recupérer le nom du fichier temporaire téléchargé sur le serveur.
                      move_uploaded_file($fichierTempimagesjeux,'../images/'.$imagejeux);
