@@ -6,7 +6,7 @@
 <div class="container">
 <h1>Liste des créneaux</h1>
 
-<form method="post" action="traitement_inscription_creneau.php">
+<form method="GET" action="traitement_inscription_creneau.php">
 
 
 <select class="form-select" name="creneau" aria-label="Default select example">
