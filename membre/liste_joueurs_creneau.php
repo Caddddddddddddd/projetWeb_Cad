@@ -19,10 +19,8 @@
         <thead>
             <tr>
                 
-                <th scope="col">Nom Jeux</th>
-                <th scope="col">Creneau</th>
-                <th scope="col">Choix</th>
-                <th scope="col">Liste_joueurs</th>
+                <th scope="col">Nom Joueurs</th>
+            
             </tr>
         </thead>
         <tbody>
@@ -31,7 +29,7 @@
             //$i = 1;
 
             // Utilisation de "ORDER BY" pour ordonner les résultats par ID membre
-            require ('selectioncreneau.php');
+            require ('traitement_inscription_creneau.php');
 
            /*  $req1 = $db->prepare("SELECT * FROM imagejeux ORDER BY id_imagejeux");
             $req1->execute(); && $user1 = $req1->fetch()*/

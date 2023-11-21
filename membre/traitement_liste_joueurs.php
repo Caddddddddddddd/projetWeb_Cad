@@ -1,5 +1,5 @@
 
-  <?php
+<?php
 
 // Connexion :
 require ('../cad/connection.php');

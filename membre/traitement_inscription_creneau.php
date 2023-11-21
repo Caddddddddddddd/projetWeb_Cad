@@ -1,18 +1,30 @@
-
 <?php
+session_start();
+$user_id = $_SESSION['id_membre'];
+
+
+// Valider et nettoyer l'ID
+$id = isset($_GET['idcreneau']) ? intval($_GET['idcreneau']) : 0;
+
+include('../cad/connection.php');
 
 
 
-$options = [
-    'cost' => 12,
-];
+$q = $db->prepare("INSERT INTO membre_creneau(id_membre, id_creneau) VALUES (:id_membre, :id_creneau)");
+
+
+$q->execute([
+    'id_membre' => $user_id,
+   'id_creneau' => $id
+   ]);  
    
-    if (isset($_GET['inscrire'])) {
-        include('../cad/connection.php');
-   
-        $valeur_select = $_GET['creneau'];
-        echo $valeur_select;
-    }
+
+  
+
+header('location:choixcreneau.php');
+exit();
+
+
 
 
 

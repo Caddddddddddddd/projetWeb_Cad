@@ -16,7 +16,7 @@
        
         if($user['privilege'] == "admin"){
             session_start();
-            $_SESSION['privilege'] == "admin";
+            $_SESSION['privilege'] = "admin";
             $_SESSION['id_membre'] = $user['id_membre'];
             
 
@@ -24,8 +24,10 @@
             exit();
         }elseif($user['privilege'] == "membre"){
             session_start();
-            $_SESSION['privilege'] == "membre";
+            $_SESSION['privilege'] = "membre";
             $_SESSION['id_membre'] = $user['id_membre'];
+            var_dump($_SESSION);
+           
             header('Location: ../membre/accueilMembre.php');
         exit();
         }     
