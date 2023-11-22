@@ -5,7 +5,7 @@ $user_id = $_SESSION['id_membre'];
 
 // Valider et nettoyer l'ID
 $id = isset($_GET['idcreneau']) ? intval($_GET['idcreneau']) : 0;
-
+var_dump($id);
 include('../cad/connection.php');
 
 

@@ -1,20 +1,33 @@
-
 <?php
+/* session_start();
+$user_id = $_SESSION['id_membre'];
 
-// Connexion :
-require ('../cad/connection.php');
+var_dump($user_id); */
+// Valider et nettoyer l'ID
 
-$ps = $db->prepare("SELECT creneau.id_creneau,jeux.nom_jeux,creneau.date FROM jeux INNER JOIN creneau on (jeux.id_jeux=creneau.id_jeux_creneau)");
+$id1 = isset($_GET['idcreneau']) ? intval($_GET['idcreneau']) : 0;
+//var_dump($id1);
+
+include('../cad/connection.php');
 
 
 
-$ps->execute();
+$q = $db->prepare("SELECT tablemembre.pseudo FROM tablemembre WHERE id_membre IN (SELECT membre_creneau.id_membre FROM membre_creneau WHERE id_creneau = :id1)");
 
 
-//$ps1 = $db->prepare("SELECT id_jeux,jeux.nom_jeux,creneau.date FROM jeux INNER JOIN creneau on (jeux.id_jeux=creneau.id_jeux_creneau) WHERE jeux.id_jeux = :idJeu");
+
+$q->execute([
+    'id1' => $id1
+  
+   ]);
+
+   require ('liste_joueurs_creneau.php');
+
+//header('location:liste_joueurs_creneau.php');
+//exit();
+
+
 
 
 
 ?>
-
-

@@ -40,8 +40,11 @@
                 echo '<tr>';
                 echo '<td>' . $row['nom_jeux'] . '</td>';
                 echo '<td>' . $row['date'] . '</td>';
+               $id_creneau=$row['id_creneau'] ;
                 echo '<td><a href="traitement_inscription_creneau.php?idcreneau=' . $row['id_creneau'] . '" >Inscrire</a></td>';
-                echo '<td><a href="traitement_inscription_creneau.php?idcreneau=' . $row['id_creneau'] . '" >Liste</a></td>';
+              
+                echo '<td><a href="traitement_liste_joueurs.php?idcreneau=' . $id_creneau . '" >Liste</a></td>';
+         
                 echo '</tr>';
                 
             }

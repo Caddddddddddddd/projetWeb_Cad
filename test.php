@@ -28,6 +28,8 @@
             }
         ?>
     </div>
+
+    <a href="regles_jeux/jeu-de-ludo-regle.pdf" target="_blank">Ouvrir le fichier PDF dans un nouvel onglet</a>
     
 </body>
 </html>

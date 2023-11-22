@@ -29,6 +29,8 @@
             echo '<p class="card-text"><strong>Description:</strong> ' . $resultat['descriptions'] . '</p>';
             echo '<p class="card-text"><strong>Catégorie:</strong> ' . $resultat['categorie'] . '</p>';
             echo '<p class="card-text"><strong>Règles:</strong> ' . $resultat['regles'] . '</p>';
+            echo '<p class="card-text"><a href="../regles_jeux/' . $resultat['regles'] . '" target="_blank">Règles</a></p>';
+
             echo '<a href="traitement_inscription_creneau.php?idjeux=' . $resultat['id_jeux'] . '"  class="btn btn-success">';
             echo 'Success';
             echo '</a>';
