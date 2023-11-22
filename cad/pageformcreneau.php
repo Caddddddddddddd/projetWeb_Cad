@@ -1,17 +1,9 @@
-<?php
-    $pseudo = "cadhel";
-    $age = 18;
-    $email = "farelagossa@gmail.com";
-
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <html>
 <head>
-    <title>Titre</title>
+    <title>Creation créneau</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
@@ -21,12 +13,13 @@
 </head>
 <body>
     
-    
 
+
+<?php
+    require 'navbar.html';
+    ?>
+    <h2>Creation créneau</h2>
     
-    
-    <!-- Menu de navigation -->
- 
     <form  method ="post" action="" enctype="multipart/form-data">
     <div class="container">
     <div class="row my-3">
@@ -64,56 +57,3 @@
     </div>
 </form>
     <?php
-
-        include('connection.php');
-        global $db;
-        $options = [
-            'cost' => 12,
-            ];
-        
-
-
-        if(isset($_POST['formsend']))
-        {
-
-               /*  $pseudo= $_POST['pseudo']; 
-                //$age= $_POST['age'];  
-                $email= $_POST['email'];
-                $passwords = $_POST['passwords'];
-                $cdpassword = $_POST['cdpassword']; */
-
-
-                if(isset($_POST['pseudo'], $_POST['email'], $_POST['passwords'], $_POST['cdpassword'])) {
-                     $pseudo = $_POST['pseudo'];
-                     $email = $_POST['email'];
-                     $passwords = $_POST['passwords'];
-                     $cdpassword = $_POST['cdpassword'];
-                
-               if($passwords == $cdpassword){
-                
-                $q = $db->prepare("INSERT INTO tablemembre(pseudo,email,passwords,privilege) VALUES(:pseudo,:email,:passwords,:privilege)");
-                $q->execute([
-                  'pseudo' => $pseudo,
-                 'email' => $email,
-                 'passwords' => password_hash($passwords, PASSWORD_BCRYPT, $options),
-                 'privilege' => "admin"
-                 ]);  
-                 //$password = ;
-                echo" Vous etes inscrit : ".$_POST['pseudo'];
-
-               } else {
-                echo "Les mots de passe ne correspondent pas.";
-               }
-
-                
-             }
-
-             header('Location: listadmin.php');
-         }
-           else {
-                echo"Probleme";
-                }
-    ?>
-    
-</body>
-</html>
