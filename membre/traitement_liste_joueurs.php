@@ -6,7 +6,7 @@ var_dump($user_id); */
 // Valider et nettoyer l'ID
 
 $id1 = isset($_GET['idcreneau']) ? intval($_GET['idcreneau']) : 0;
-//var_dump($id1);
+var_dump($id1);
 
 include('../cad/connection.php');
 
