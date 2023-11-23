@@ -61,5 +61,5 @@ $q1_delete->execute();
 $q1_delete->closeCursor();
 
 //echo "Jeu supprimé avec succès : " . $_POST['nomjeux'];
-header("location:list.php");
+//header("location:list.php");
 ?>
