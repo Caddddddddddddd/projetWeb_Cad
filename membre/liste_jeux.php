@@ -33,28 +33,18 @@ session_start();
             echo '<p class="card-text"><strong>Catégorie:</strong> ' . $resultat['categorie'] . '</p>';
             echo '<p class="card-text"><strong>Règles:</strong> ' . $resultat['regles'] . '</p>';
             echo '<p class="card-text"><a href="../regles_jeux/' . $resultat['regles'] . '" target="_blank">Règles</a></p>';
-            echo '<a href="traitement_inscription_creneau.php?idjeux=' . $resultat['id_jeux'] . '"  class="btn btn-primary">';
-            echo 'Like';
-            echo '</a>';
-                $_SESSION['bu
+            
           
-            if (isset($_SESSION['button_clicked'])) {
+        
                
             // Le bouton a déjà été cliqué, n'affiche pas le bouton
-          echo '<a href="traitement_inscription_creneau.php?idjeux=' . $resultat['id_jeux'] . '"  class="btn btn-primary" name="yo">';
+          echo '<a href="favoris.php?idjeux=' . $resultat['id_jeux'] . '"  class="btn btn-primary" >';
                 
-          echo 'Liked';
+          echo 'Like';
           echo '</a>';
                 // Marque le bouton comme cliqué dans la session
                 
-            } else {
-               
-                // Le bouton n'a pas été cliqué, affiche le bouton avec une chaîne de requête
-                echo '<a href="traitement_inscription_creneau.php?idjeux=' . $resultat['id_jeux'] . '"  class="btn btn-primary">';
-                echo 'Like';
-                echo '</a>';
-                $_SESSION['button_clicked'] = true;
-            }
+           
             
 
           

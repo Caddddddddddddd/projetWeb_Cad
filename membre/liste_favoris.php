@@ -4,7 +4,7 @@
 
 
 <div class="container">
-<h1>Liste des joueurs</h1>
+<h1>Liste des favoris</h1>
 
 
 
@@ -19,7 +19,7 @@
         <thead>
             <tr>
                 
-                <th scope="col">Nom Joueurs</th>
+                <th scope="col">Jeux favoris</th>
             
             </tr>
         </thead>
@@ -30,7 +30,7 @@
 
             // Utilisation de "ORDER BY" pour ordonner les résultats par ID membre
            
-          // require ('traitement_liste_joueurs.php');
+            //require ('traitement_liste_favoris.php');
 
            /*  $req1 = $db->prepare("SELECT * FROM imagejeux ORDER BY id_imagejeux");
             $req1->execute(); && $user1 = $req1->fetch()*/
@@ -38,7 +38,7 @@
             while ($row1 = $q->fetch()) {
                
                 echo '<tr>';
-                echo '<td>' . $row1['pseudo'] . '</td>';
+                echo '<td>' . $row1['nom_jeux'] . '</td>';
                
                 echo '</tr>';
               
