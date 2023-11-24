@@ -116,7 +116,7 @@
 
 .home-section{
     width:100%;
-    height: 93vh;
+    height: 72vh;
     background-color: #a9a9a926;
 }
 #navbar{
@@ -153,15 +153,21 @@ background-color:#1c1c50 ;
     z-index: 0;
 
 }
-.home .img{
+
+.col-md-5 {
+    margin-bottom: 20px; /* Ajoutez une marge en bas selon vos besoins */
+}
+
+.home-image{
     flex: 1 1 400px;
+    margin-top: 70px;
+    
 }
-.home .img img{
-    width: 100px;
-}
+
 .home .content{
     flex: 1 1 400px;
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 .content h3{
     margin-left: 70px;
@@ -173,11 +179,12 @@ background-color:#1c1c50 ;
 .content h3 span{
     font-size: 40px;;
 }
-.content p{
+.home .content p{
      margin-left: 70px;
      color:#1c1c50;
+     text-align: justify;
 }
-.content #shopnow{
+.content #playnow{
     margin-left: 70px;
     width: 200px;
     height: 38px;
@@ -186,14 +193,16 @@ background-color:#1c1c50 ;
     transition: 0.5s ease;
     cursor: pointer;
 }
-.content #shopnow:hover{
+.content #playnow:hover{
     background-color: #1c1c50;
     color: white;
     
 }
 
 #top-cards{
-    margin-top: 30px;
+    text-align: center; /* Centrer horizontalement */
+    
+    margin-top: 90px;
     
 }
 #top-cards .card img{
@@ -310,3 +319,4 @@ background-color:#1c1c50 ;
     text-align: center;
     float:left;
 }
+

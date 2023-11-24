@@ -1,12 +1,16 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title><?php echo "Welcome!"; ?></title>
+        <title>Accueil</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="css/style.css">
+            <!-- <link rel="stylesheet" href="../css/style.css"> -->
+            <link href="../css/style.css" rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
          
          <!-- block stylesheets -->
@@ -19,28 +23,46 @@
     <body>
    
     <?php
-    require 'navbar.html';
+    require ('navbar.html');
     ?>
 
     <!-- block body -->
 
     <section class="home" >
             <div class="content">
-                <h3>Biggest Clothe Sale
-                        <br><span>Up To 50% off</span>
+                <h3>PlateauVirtuoso  
                 </h3>
-                <p>gefkdhcuyhcuyay</p>
-                <button id="shopnow">Shop Now</button>
+                
+                <div class="col-8 ">
+                <p>Plongez dans l'univers captivant des jeux de plateau en ligne avec PlateauVirtuoso, votre destination ludique par excellence. Rassemblez vos amis, défiez des adversaires du monde entier et explorez des mondes fantastiques sans quitter le confort de votre foyer. PlateauVirtuoso offre une expérience de jeu immersive, où la stratégie, l'intrigue et le divertissement se rencontrent virtuellement. Rejoignez la communauté des joueurs passionnés et laissez la magie des jeux de plateau s'épanouir dans le monde numérique. Que l'aventure commence sur PlateauVirtuoso, où chaque dé de dés est une promesse d'excitation !</p>
+                </div>
+               
+                <form method="post">
+                <button id="playnow" name="play">Jouer !</button>
+                </form>
+                <?php
+                if (isset($_POST['play'])) {
+                    if (isset($_SESSION['id_membre'])) {
+                        // La session existe, redirige vers la page de jeu du membre
+                        header('Location: ../membre/accueilMembre.php');
+                        exit();
+                    } else {
+                        // La session n'existe pas, redirige vers une autre page (par exemple, la page de connexion)
+                        header('Location: loginform.php');
+                        exit();
+                    }
+                }
+                 ?>
+
             </div>
             <div class="col-md-5 py-3 py-md-4">
-                <img src="../images/Free_Vector_Board_games_online_composition-removebg-preview.png" alt="">
+                <img src="../images/Free_Vector_Board_games_online_composition-removebg-preview.png" alt="" class="home-image">
             </div>
     </section>
-
-
     </div>
 
     <div class="container" id="top-cards">
+        <h1>Jeux Top 4</h1>
         <div class="row">
             <div class="col-md-5 py-3 py-md-0">
                 <div class="card" style="background-color: #1c1c50;">
