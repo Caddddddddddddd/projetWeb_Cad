@@ -206,7 +206,7 @@ background-color:#1c1c50 ;
     
 }
 #top-cards .card img{
-    height: 60vh;
+    height: 50vh;
 }
 #top-cards h5{
     color: #1c1c50;
@@ -221,7 +221,7 @@ background-color:#1c1c50 ;
 }
 .banner .content{
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .banner .content h1{
     color: white;
@@ -233,19 +233,7 @@ background-color:#1c1c50 ;
     text-shadow: 1px 1px 1px black;
     letter-spacing: 3px;
 }
-#bannerbtn button{
-    width:150px;
-    height: 38px;
-    background: transparent;
-    color:white;
-    border: 2px solid white;
-    transition: 0.5s ease;
-    cursor: pointer;
-}
-#bannerbtn button:hover{
-    background-color: #1c1c50;
-    border: none;
-}
+
 #footer{
     padding: 0 0 30px 0;
     color:#d0d0d0;
