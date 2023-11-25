@@ -10,5 +10,5 @@ session_start();
                         header('Location: loginform.php');
                         exit();
                     }
-                
+                //session_destroy();
                  ?>

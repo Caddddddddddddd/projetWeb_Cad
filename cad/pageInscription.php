@@ -109,7 +109,12 @@
                  'privilege' => "membre"
                  ]);  
                  //$password = ;
-                echo" Vous etes inscrit : ".$_POST['pseudo'];
+                
+                echo '<div class="alert alert-secondary" role="alert">';
+                echo 'Inscription réussie ' . $_POST['pseudo'] . ' !';
+
+                echo '</div>';
+
 
                } else {
                 echo "Les mots de passe ne correspondent pas.";

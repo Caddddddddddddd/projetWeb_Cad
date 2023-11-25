@@ -1,9 +1,22 @@
-<?php
-    require ('sidebar.php');
-?>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <!-- Contenu de la barre latérale -->
+            <?php
+            // Inclure le contenu de la nouvelle barre latérale ici
+            require('new_sidebar.php');
+            ?>
+        </nav>
 
 
-<div class="container">
+
+        <!-- Contenu principal -->
+        <main role="main" class="col-md-10 ml-sm-auto">
+            <!-- Votre contenu principal ici -->
+            
+            
+<div class="container mt-5">
 <h1>Créneaux</h1>
 
 
@@ -15,7 +28,7 @@
 
  
 ?>
-<table class="table">
+<table class="table mt-5">
         <thead>
             <tr>
                 
@@ -59,6 +72,10 @@
 </form>
 
 </div>
+        </main>
+
+
+
 
 
 </body>

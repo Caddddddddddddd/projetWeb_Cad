@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
- 
+
 }
 
 html {
@@ -16,7 +16,8 @@ main {
   max-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
-  
+  position: relative;
+  z-index: 2;
 }
 
 .b-example-divider {
@@ -96,4 +97,5 @@ main {
 .body {
   height: 100vh; /* Assurez-vous que la barre latérale occupe 100% de la hauteur */
   overflow-y: auto; /* Pour activer le défilement si nécessaire */
+
 }

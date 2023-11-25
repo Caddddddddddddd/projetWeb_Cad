@@ -23,6 +23,6 @@ $query = $db->prepare("INSERT INTO favoris_membre(id_favoris_jeux, id_favoris_me
 
   
 
-header('location:liste_jeux.php');
+header('location:accueilMembre.php');
 exit();
 ?>
