@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-    require 'navbar.html';
+    require 'menuadmin.php';
     ?>
 <div class="container">
 <h1>Ajout d'un Jeux </h1>

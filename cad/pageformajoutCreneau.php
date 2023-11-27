@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-    require 'navbar.html';
+    include 'menuadmin.php';
     include('connection.php');
     // Ajoutez cette section pour récupérer la liste des jeux depuis la base de données
 $query = $db->query("SELECT nom_jeux FROM jeux");
