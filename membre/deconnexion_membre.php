@@ -8,6 +8,7 @@ $_SESSION = array();
 // Détruit la session
 session_destroy();
 
+
 // Redirige vers la page de connexion
 header("location: ../cad/index.php");
 exit;

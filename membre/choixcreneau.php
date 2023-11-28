@@ -33,8 +33,9 @@
             <tr>
                 
                 <th scope="col">Nom Jeux</th>
-                <th scope="col">Creneau</th>
-                <th scope="col"></th>
+                <th scope="col">Heure début</th>
+                <th scope="col">Heure de fin</th>
+                <th scope="col">Inscription</th>
                 <th scope="col">Liste des joueurs</th>
             </tr>
         </thead>
@@ -52,7 +53,8 @@
             while ($row = $ps->fetch()) {
                 echo '<tr>';
                 echo '<td>' . $row['nom_jeux'] . '</td>';
-                echo '<td>' . $row['date'] . '</td>';
+                echo '<td>' . $row['date_debut'] . '</td>';
+                echo '<td>' . $row['date_fin'] . '</td>';
                $id_creneau=$row['id_creneau'] ;
                echo '<td><a href="traitement_inscription_creneau.php?idcreneau=' . $row['id_creneau'] . '">S\'inscrire</a></td>';
 
