@@ -15,7 +15,13 @@
 <body>
 <?php
     require 'navbar.html';
-    ?>
+    echo '<div class="alert alert-secondary" role="alert">';
+    echo $_SESSION['message'] . '!';
+    echo '</div>';
+?>
+
+
+
   <div class="PagedeConnection">
     <div class="enregistrement" id="formulaire">
       <h2 class="Titre_Formulaire">Formulaire</h2>

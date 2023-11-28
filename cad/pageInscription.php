@@ -2,7 +2,7 @@
     $pseudo = "cadhel";
     $age = 18;
     $email = "farelagossa@gmail.com";
-
+    session_start();
 
 ?>
 
@@ -109,25 +109,25 @@
                  'privilege' => "membre"
                  ]);  
                  //$password = ;
-                
-                echo '<div class="alert alert-secondary" role="alert">';
-                echo 'Inscription réussie ' . $_POST['pseudo'] . ' !';
-
-                echo '</div>';
+               
+                 $_SESSION['message'] = "Inscription réussie";
+                 header('location:loginform.php');
 
 
                } else {
-                echo "Les mots de passe ne correspondent pas.";
+                $_SESSION['message'] = "Les mots de passe ne correspondent pas.";
+              
                }
 
                 
              }
-
+          
             
          }
            else {
               //  echo"Probleme";
                 }
+               
     ?>
     
 </body>

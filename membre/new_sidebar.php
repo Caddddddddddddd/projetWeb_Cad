@@ -124,13 +124,15 @@
           Créneaux
         </a>
       </li>
-      
+
       <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          Customers
+        <a href="mes_creneau.php" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+          Mes Créneaux
         </a>
       </li>
+      
+      
     </ul>
     <hr>
     <a href="deconnexion_membre.php" class="nav-link text-white">
