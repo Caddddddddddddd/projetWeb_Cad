@@ -1,6 +1,12 @@
 <?php
 namespace App1;
+require_once('roleAdmin.php');
 
+
+            // Inclure le contenu de la nouvelle barre latérale ici
+            
+
+    
 include("connection.php");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

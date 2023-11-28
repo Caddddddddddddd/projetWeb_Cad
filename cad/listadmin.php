@@ -3,6 +3,12 @@ $titre = "Administrateur";
 include 'header.inc.php';
 include 'menuadmin.php';
 include 'connection.php';
+
+            // Inclure le contenu de la nouvelle barre latérale ici
+            session_start();
+            require_once('roleAdmin.php');
+
+            
 ?>
 
 <div class="container">

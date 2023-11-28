@@ -1,7 +1,12 @@
 <?php
-    $pseudo = "cadhel";
+
+// Inclure le contenu de la nouvelle barre latérale ici
+require_once('roleAdmin.php');
+
+
+    /* $pseudo = "cadhel";
     $age = 18;
-    $email = "farelagossa@gmail.com";
+    $email = "farelagossa@gmail.com"; */
 
 
 ?>
@@ -30,7 +35,7 @@
     
     
     <!-- Menu de navigation -->
- 
+    <br><br><h2 class="Titre">Page Création Admin</h2>
     <form  method ="post" action="" enctype="multipart/form-data">
     <div class="container">
     <div class="row my-3">

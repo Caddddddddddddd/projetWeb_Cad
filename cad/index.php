@@ -1,6 +1,9 @@
 <?php
-session_start();
-?>
+            // Inclure le contenu de la nouvelle barre latérale ici
+            session_start();
+            //require_once('roleAdmin.php');
+
+            ?>
 <!DOCTYPE html>
 <html>
     <head>

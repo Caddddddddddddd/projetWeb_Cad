@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +18,13 @@
 <body>
 <?php
     require 'navbar.html';
+    if(isset($_SESSION['message_email'])) {
+      echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">';
+      echo $_SESSION['message_email'];
+      echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+      echo '</div>';
+      unset($_SESSION['message_email']);
+  }
     ?>
   <div class="PagedeConnection">
     <div class="enregistrement" id="formulaire">

@@ -8,8 +8,9 @@
 </head>
 <body>
 <?php
-    require 'navbar.html';
+    require 'admin.php';
     include('connection.php');
+
     // Ajoutez cette section pour récupérer la liste des jeux depuis la base de données
 $query = $db->query("SELECT nom_jeux FROM jeux");
 $jeuxList = $query->fetchAll(PDO::FETCH_COLUMN);

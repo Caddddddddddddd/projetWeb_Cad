@@ -156,7 +156,7 @@ $q1_update->execute();
   header("location:list.php");
   }
   else {
-    echo"Probleme";
+    //echo"Probleme";
     }
 
 ?>

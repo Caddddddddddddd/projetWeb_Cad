@@ -1,4 +1,9 @@
+<?php
+            // Inclure le contenu de la nouvelle barre latérale ici
+            
+            require_once('roleAdmin.php');
 
+            ?>
 <!DOCTYPE html>
 <html lang="en">
 <html>

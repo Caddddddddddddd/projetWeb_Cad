@@ -1,9 +1,8 @@
 <?php
-    $pseudo = "cadhel";
-    $age = 18;
-    $email = "farelagossa@gmail.com";
-
-
+// Inclure le contenu de la nouvelle barre latérale ici
+session_start();
+require ('navbar.html');
+//require_once('roleAdmin.php');
 ?>
 
 
@@ -20,12 +19,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    
-
-
 <?php
-    require 'navbar.html';
-    ?>
+if(isset($_SESSION['message_email'])) {
+      echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">';
+      echo $_SESSION['message_email'];
+      echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+      echo '</div>';
+      unset($_SESSION['message_email']);
+  }
+  ?>
     <h2>Inscription</h2>
     <!-- Menu de navigation -->
     
@@ -37,7 +39,7 @@
         <input type="submit" name="formsend" id = "formsend">
 
     </form> -->
-    <form  method ="post" action="" enctype="multipart/form-data">
+    <form  method ="post" action="traitementInscription.php" enctype="multipart/form-data">
     <div class="container">
     <div class="row my-3">
        <div class="row">
@@ -73,62 +75,5 @@
         </div>
     </div>
 </form>
-    <?php
-
-        include('connection.php');
-        global $db;
-        $options = [
-            'cost' => 12,
-            ];
-        
-
-
-        if(isset($_POST['formsend']))
-        {
-
-               /*  $pseudo= $_POST['pseudo']; 
-                //$age= $_POST['age'];  
-                $email= $_POST['email'];
-                $passwords = $_POST['passwords'];
-                $cdpassword = $_POST['cdpassword']; */
-
-
-                if(isset($_POST['pseudo'], $_POST['email'], $_POST['passwords'], $_POST['cdpassword'])) {
-                     $pseudo = $_POST['pseudo'];
-                     $email = $_POST['email'];
-                     $passwords = $_POST['passwords'];
-                     $cdpassword = $_POST['cdpassword'];
-                
-               if($passwords == $cdpassword){
-                
-                $q = $db->prepare("INSERT INTO tablemembre(pseudo,email,passwords,privilege) VALUES(:pseudo,:email,:passwords,:privilege)");
-                $q->execute([
-                  'pseudo' => $pseudo,
-                 'email' => $email,
-                 'passwords' => password_hash($passwords, PASSWORD_BCRYPT, $options),
-                 'privilege' => "membre"
-                 ]);  
-                 //$password = ;
-                
-                echo '<div class="alert alert-secondary" role="alert">';
-                echo 'Inscription réussie ' . $_POST['pseudo'] . ' !';
-
-                echo '</div>';
-
-
-               } else {
-                echo "Les mots de passe ne correspondent pas.";
-               }
-
-                
-             }
-
-            
-         }
-           else {
-              //  echo"Probleme";
-                }
-    ?>
-    
 </body>
 </html>

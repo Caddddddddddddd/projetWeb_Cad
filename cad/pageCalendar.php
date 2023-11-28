@@ -1,5 +1,10 @@
 
         <?php 
+        
+        // Inclure le contenu de la nouvelle barre latérale ici
+        require_once('roleAdmin.php');
+
+        
             require 'month.php';
             require 'pageCreneau.php';
             require 'headercalendar.php';

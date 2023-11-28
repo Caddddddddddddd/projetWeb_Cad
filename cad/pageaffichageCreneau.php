@@ -1,6 +1,13 @@
 <?php 
+require_once('roleAdmin.php');
 require 'pageCreneau.php';
 require 'headercalendar.php';
+
+            // Inclure le contenu de la nouvelle barre latérale ici
+            
+            
+
+            
 
 $events = new App1\Creneau();
 
