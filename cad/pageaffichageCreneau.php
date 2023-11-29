@@ -18,7 +18,7 @@ $event = $events->find($_GET['id']);
     
 ?>
 
-<h1><?=  htmlentities($event['nom_jeux_creneau']); ?></h1>
+<h1><?=  htmlentities($event['nom_jeux']); ?></h1>
 
 <ul>
     <li>Date: <?= (new DateTime($event['date_debut']))->format('d/m/Y'); ?></li>

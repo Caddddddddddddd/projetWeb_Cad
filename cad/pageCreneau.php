@@ -15,16 +15,20 @@ class Creneau {
     /**
      * Récupère les éléments entre deux dates 
      */
-    public function getEventsBetween (\DateTime $start, \DateTime $end): array {
-        global $db; // Utilisez le mot-clé global pour faire référence à la variable $db
-
-        $sql = ("SELECT * FROM creneau WHERE date_debut BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' ");
+    public function getEventsBetween(\DateTime $start, \DateTime $end): array {
+        global $db;
+    
+        $sql = "SELECT creneau.*, jeux.nom_jeux
+                FROM creneau
+                LEFT JOIN jeux ON creneau.id_jeux_creneau = jeux.id_jeux
+                WHERE creneau.date_debut BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}'";
+    
         $stmt = $db->query($sql);
-        $resultat= $stmt->fetchAll();
+        $resultat = $stmt->fetchAll();
+    
         return $resultat;
-
-        
     }
+    
 
     /**
      * Récupère les éléments entre deux dates index par jour
@@ -43,17 +47,21 @@ class Creneau {
         return $days;
     }
 
-    public function find (int $id): array {
-        
-        global $db;
-            $sql1 = ("SELECT * FROM creneau WHERE id_creneau = $id LIMIT 1");
-            $stmt1 = $db->query($sql1);
-            $resultat1 = $stmt1 -> fetch();
+    public function find(int $id): array {
+    global $db;
+    $sql = "SELECT creneau.*, jeux.nom_jeux
+            FROM creneau
+            LEFT JOIN jeux ON creneau.id_jeux_creneau = jeux.id_jeux
+            WHERE creneau.id_creneau = :id
+            LIMIT 1";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
+    $stmt->execute();
+    $resultat = $stmt->fetch();
 
-        return $resultat1;
-        
-      
-    }
+    return $resultat;
+}
+
      // $this->db->query("SELECT * FROM creneau WHERE id_creneau = $id LIMIT 1")->fetch();
     
     /* $sql = ("SELECT * FROM creneau WHERE date_debut BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' ");

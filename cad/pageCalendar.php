@@ -61,7 +61,7 @@
         <div class="calendar__event">
             
         <?= (new DateTime($event['date_debut']))->format('H:i') ?> - <a href="pageaffichageCreneau.php?id=<?= $event['id_creneau'];?>">
-        <?= $event['nom_jeux_creneau']; ?>
+        <?= $event['nom_jeux']; ?>
     </a>
     
     </div>
@@ -75,5 +75,6 @@
     <a href="pageformajoutCreneau.php" class="calendar_button">+</a>
 
         </div>
-        <?php require 'footerCalendar.php';  ?>
+        <?php require 'footerCalendar.php'; 
+        //var_dump($event); ?>
     
