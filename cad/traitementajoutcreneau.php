@@ -46,13 +46,27 @@
                 
                
                 
-                $q = $db->prepare("INSERT INTO creneau(nom_jeux_creneau, date_debut, id_jeux_creneau, date_fin) VALUES(:nom_jeux_creneau, :date_debut, :id_jeux_creneau, :date_fin)");
+                $q = $db->prepare("INSERT INTO creneau(date_debut, id_jeux_creneau, date_fin) VALUES(:date_debut, :id_jeux_creneau, :date_fin)");
                 $q->execute([
-                  'nom_jeux_creneau' => $nomjeux,
+                
                  'date_debut' => $heureDebutAvecDate,
                  'id_jeux_creneau' => $idjeuximages,
                  'date_fin' => $heureFinAvecDate
                  ]);  
+                global  $nomcreneau;
+                 $q = $db->prepare("SELECT nom_jeux FROM jeux WHERE id_jeux = ?");
+                 $q->bindParam(1, $result['id_jeux'], PDO::PARAM_STR);
+                 $q->execute();
+                 $result = $q->fetch(PDO::FETCH_ASSOC);
+                 $nomcreneau = $result['nom_jeux'];
+                 var_dump($nomcreneau);
+
+                 
+                
+                echo "<a href='pageCalendar.php?nom=$nomcreneau'>Aller à la page 2</a>";
+
+
+
                  /* $id_jeux = $db->lastInsertId(); // Récupérer l'ID du jeu inséré
 
                  $q1 = $db->prepare("INSERT INTO imagejeux(images, id_jeux_images) VALUES(:images, :idjeuximages)");
@@ -65,7 +79,7 @@
                 header("location:list.php");        */  
              }
 
-             header("location:pageCalendar.php");
+             //header("location:pageCalendar.php");
          }
            else {
                 echo"Probleme";

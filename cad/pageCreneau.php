@@ -22,6 +22,8 @@ class Creneau {
         $stmt = $db->query($sql);
         $resultat= $stmt->fetchAll();
         return $resultat;
+
+        
     }
 
     /**

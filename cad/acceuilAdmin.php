@@ -18,10 +18,101 @@
 <?php
             // Inclure le contenu de la nouvelle barre latérale ici
             require('menuadmin.php');
+
+
+         //   $user_id = $_SESSION['id_membre'];
+
+//var_dump($user_id); 
+// Valider et nettoyer l'ID
+
+
+//var_dump($id1);
+
+include('../cad/connection.php');
+
+
+
+$q = $db->prepare("SELECT * FROM jeux INNER JOIN creneau on(jeux.id_jeux=creneau.id_jeux_creneau) INNER JOIN membre_creneau on (creneau.id_creneau=membre_creneau.id_creneau) INNER JOIN tablemembre on (membre_creneau.id_membre=tablemembre.id_membre)  ");
+
+
+
+$q->execute();
+?>
+   <div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <!-- Contenu de la barre latérale -->
+            <?php
+            // Inclure le contenu de la nouvelle barre latérale ici
+           // require('new_sidebar.php');
             ?>
+        </nav>
+
+
+
+        <main role="main" class="col-md-10 ml-sm-auto">
+            <!-- Votre contenu principal ici -->
+            
+            <div class="container mt-5">
+<h1>Jeux auxquels je suis inscrit</h1>
+
+
+<table class="table mt-5">
+        <thead>
+            <tr>
+                <th scope="col ">Nom Membre</th>
+                <th scope="col ">Nom Jeux</th>
+                <th scope="col ">Date début</th>
+                <th scope="col ">Date fin</th>
+                <th scope="col ">Statut</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php
+            //$i = 1;
+
+            // Utilisation de "ORDER BY" pour ordonner les résultats par ID membre
+           
+            //require ('traitement_liste_favoris.php');
+
+           /*  $req1 = $db->prepare("SELECT * FROM imagejeux ORDER BY id_imagejeux");
+            $req1->execute(); && $user1 = $req1->fetch()*/
+         
+            while ($row1 = $q->fetch()) {
+               
+                echo '<tr>';
+                echo '<td>' . $row1['pseudo'] . '</td>';
+                echo '<td>' . $row1['nom_jeux'] . '</td>';
+                echo '<td>' . $row1['date_debut'] . '</td>';
+                echo '<td>' . $row1['date_fin'] . '</td>';
+                echo '<td>' . $row1['statut'] . '</td>';
+                echo '<td><a href="traitement_inscription_creneau.php?idcreneau=' . $row['id_creneau'] . '">Accepter</a></td>';
+
+              
+                echo '<td><a href="traitement_liste_joueurs.php?idcreneau=' . $id_creneau . '" >Refuser</a></td>';
+                echo '</tr>';
+              
+            }
+            ?>
+        </tbody>
+    </table>
 
 
 
 
-</body>
-</html>
+
+</form>
+
+</div>
+        </main>
+
+
+
+
+
+
+
+
