@@ -11,7 +11,7 @@
 
 
 
-        <main role="main" class="col-md-10 ml-sm-auto">
+       
             <!-- Votre contenu principal ici -->
             <div class="container mt-5">
 <h1>Liste des joueurs</h1>
@@ -65,7 +65,7 @@
 
 </div>
 
-        </main>
+      
 
 
 

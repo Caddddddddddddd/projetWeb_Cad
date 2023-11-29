@@ -1,18 +1,17 @@
 <div class="container-fluid">
-    <div class="row">
-        <!-- Sidebar -->
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <!-- Contenu de la barre latérale -->
+
             <?php
             // Inclure le contenu de la nouvelle barre latérale ici
-            require('new_sidebar.php');
+            require('menu_membre.php');
             ?>
-        </nav>
+       
+        <br>
+       
 
 
 
         <!-- Contenu principal -->
-        <main role="main" class="col-md-10 ml-sm-auto">
+        
             <!-- Votre contenu principal ici -->
             
             
@@ -75,7 +74,7 @@
 </form>
 
 </div>
-        </main>
+     
 
 
 

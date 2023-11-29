@@ -14,7 +14,7 @@ if (isset($_POST['envoyer'])) {
     if (password_verify($password, $user["passwords"])) {
         if ($user['privilege'] == "admin") {
             $_SESSION['privilege'] = "admin";
-           // $_SESSION['PROFILE'] = $user;
+           $_SESSION['PROFILE'] = $user;
             $_SESSION['id_user'] = $user['id_membre'];
             $_SESSION['pseudo'] = $user['pseudo'];
 

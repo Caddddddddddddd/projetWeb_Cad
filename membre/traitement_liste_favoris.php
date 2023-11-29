@@ -1,6 +1,6 @@
 <?php
 session_start();
-$user_id = $_SESSION['id_membre'];
+$user_id = $_SESSION['id_user'];
 
 //var_dump($user_id); 
 // Valider et nettoyer l'ID

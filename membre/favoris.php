@@ -1,9 +1,9 @@
 <?php
 session_start();
-$user = $_SESSION['id_membre'];
+$user = $_SESSION['id_user'];
 $aa = isset($_GET['idjeux']) ? intval($_GET['idjeux']) : 0;
-//var_dump($aa);
-//var_dump($user);
+var_dump($aa);
+var_dump($user);
 include('../cad/connection.php');
 
 

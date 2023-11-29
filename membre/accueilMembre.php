@@ -1,21 +1,28 @@
 <div class="container-fluid">
-    <div class="row">
-        <!-- Sidebar -->
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  
             <!-- Contenu de la barre latérale -->
             <?php
             // Inclure le contenu de la nouvelle barre latérale ici
-            require('new_sidebar.php');
+            require('menu_membre.php');
             ?>
-        </nav>
+       
+        <br>
 
         <!-- Contenu principal -->
-        <main role="main" class="col-md-10 ml-sm-auto">
+      
             <!-- Votre contenu principal ici -->
             
             <form>
 <div class="container">
-   
+<?php
+    if (isset($_SESSION['message'])) {
+        echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">';
+        echo $_SESSION['message'];
+        echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+        echo '</div>';
+        unset($_SESSION['message']);
+    }
+    ?>
     <div class="row">
         <?php
         // Tableau d'informations sur les images
@@ -57,6 +64,6 @@
     </div>
 </div>
 </form>
-        </main>
+
     </div>
 </div>
