@@ -66,6 +66,8 @@ $q->execute();
                 <th scope="col ">Date début</th>
                 <th scope="col ">Date fin</th>
                 <th scope="col ">Statut</th>
+                <th scope="col ">Accepter</th>
+                <th scope="col ">Refuser</th>
             
             </tr>
         </thead>
@@ -89,10 +91,10 @@ $q->execute();
                 echo '<td>' . $row1['date_debut'] . '</td>';
                 echo '<td>' . $row1['date_fin'] . '</td>';
                 echo '<td>' . $row1['statut'] . '</td>';
-                echo '<td><a href="traitement_inscription_creneau.php?idcreneau=' . $row['id_creneau'] . '">Accepter</a></td>';
+                echo '<td><a href="acceptercreneau.php?idcreneauad=' . $row1['id_membre_creneau'] . '">Accepter</a></td>';
 
               
-                echo '<td><a href="traitement_liste_joueurs.php?idcreneau=' . $id_creneau . '" >Refuser</a></td>';
+                echo '<td><a href="supprimercreneau.php?idcreneauad=' . $row1['id_membre_creneau'] . '" >Refuser</a></td>';
                 echo '</tr>';
               
             }
