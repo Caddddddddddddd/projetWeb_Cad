@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('menu_membre.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,6 @@
 
   <?php
-
+require_once('role_membre.php');
 // Connexion :
 require ('../cad/connection.php');
 

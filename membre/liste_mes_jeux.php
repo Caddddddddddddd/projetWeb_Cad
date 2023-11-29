@@ -1,6 +1,10 @@
 <div class="container-fluid">
 <?php
             // Inclure le contenu de la nouvelle barre latérale ici
+          
+            require_once('role_membre.php');
+
+          
             require('menu_membre.php');
             ?>
        

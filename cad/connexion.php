@@ -41,5 +41,13 @@ if (isset($_POST['envoyer'])) {
             exit();
         }
     }
+    else{
+        $_SESSION['message'] = 'Erreur ! Entrez à nouveau vos identifiants';
+
+           
+
+
+            header('Location: loginform.php');
+    }
 }
 ?>

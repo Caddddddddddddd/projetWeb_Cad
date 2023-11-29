@@ -1,4 +1,5 @@
 <?php
+ require('menu_membre.php');
 /* session_start();
 $user_id = $_SESSION['id_membre'];
 

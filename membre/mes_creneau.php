@@ -1,5 +1,5 @@
 <?php
-session_start();
+   require_once('role_membre.php');
 $user_id = $_SESSION['id_membre'];
 
 //var_dump($user_id); 
