@@ -2,18 +2,10 @@
             // Inclure le contenu de la nouvelle barre latérale ici
             
             require_once('role_membre.php');
-
+            
             ?>
 <div class="container-fluid">
-    <div class="row">
-        <!-- Sidebar -->
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <!-- Contenu de la barre latérale -->
-            <?php
-            // Inclure le contenu de la nouvelle barre latérale ici
-            require('new_sidebar.php');
-            ?>
-        </nav>
+    
 
 
 

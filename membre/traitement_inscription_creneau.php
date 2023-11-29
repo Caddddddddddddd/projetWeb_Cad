@@ -5,8 +5,8 @@ $user_id = $_SESSION['id_user'];
 
 // Valider et nettoyer l'ID
 $id = isset($_GET['idcreneau']) ? intval($_GET['idcreneau']) : 0;
-var_dump($id);
-var_dump($user_id);
+//var_dump($id);
+//var_dump($user_id);
 include('../cad/connection.php');
 
 
@@ -22,7 +22,7 @@ $q->execute([
 
   
 
-//header('location:choixcreneau.php');
+header('location:choixcreneau.php');
 exit();
 
 
