@@ -52,8 +52,9 @@ class Creneau {
 
         return $resultat1;
         
-       // $this->db->query("SELECT * FROM creneau WHERE id_creneau = $id LIMIT 1")->fetch();
+      
     }
+     // $this->db->query("SELECT * FROM creneau WHERE id_creneau = $id LIMIT 1")->fetch();
     
     /* $sql = ("SELECT * FROM creneau WHERE date_debut BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' ");
         $stmt = $db->query($sql);
