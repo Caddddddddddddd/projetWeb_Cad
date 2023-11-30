@@ -2,19 +2,17 @@
   session_start();
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/styleSeconnecter.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,500&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <title>Page de connexion</title>
-  
+    <title>Inscription</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-
 <body>
 <?php
     require 'navbar.html';
@@ -33,34 +31,40 @@
     unset($_SESSION['message']);
 }
     ?>
-  <div class="PagedeConnection">
-    <div class="enregistrement" id="formulaire">
-      <h2 class="Titre_Formulaire">Formulaire</h2>
-      <div class="form-formulaire-container">
-        <form action="connexion.php" method="post" class="form_formulaire">
-          <div class="form_top">
-            <div class="form_left">
-              <div>
-                <label for="identifiant">identifiant</label>
-                <input type="text" name="identifiant" placeholder="farelagossa@gmai.com">
 
-              </div>
-               
-              <div>
-                <label for="motDePasse">Mot de Passe</label>
-                <input type="password" name="motDePasse" placeholder=".......">
-              </div>
-            </div>
-          </div>
-          <div class="form-bottom">
-            <input type="submit" name="envoyer" value="Se connecter">
 
-          </div>
-        </form>
-      </div>
+
+
+
+<form  method ="post" action="connexion.php" enctype="multipart/form-data">
+    <div class="container">
+    <div class="row my-3">
+       <div class="row">
+
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control " id="identifiant" name="identifiant" placeholder="Votre email..." required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="motDePasse" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control " id="motDePasse" name="motDePasse" placeholder="Mot de passe..." required>
+        </div>
+
+
+       </div>
+        <div class="row my-3">
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-outline-primary" id = "envoyer" name ="envoyer" type="submit">
+                Connexion
+
+            </button>
+        </div>   
+        <a href="pageInscription.php">Vous n'avez pas de compte ?</a>
+        </div>
     </div>
-    <div class="separator"></div>
-    <a href="pageInscription.php">Vous n'avez pas de compte ?</a>
-    
+</form>
 </body>
 </html>
+
+ 

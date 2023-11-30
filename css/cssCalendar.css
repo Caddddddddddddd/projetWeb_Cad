@@ -59,3 +59,29 @@
     transform: scale(1.2);
 
 }
+
+.bouton_retour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    color: #FFF;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.bouton_retour i {
+    margin-right: 8px; /* Ajustez la marge selon vos préférences */
+}
+
+.bouton_retour:hover {
+    background-color: #0056b3;
+}

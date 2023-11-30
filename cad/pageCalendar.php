@@ -40,8 +40,10 @@
                 </div>
             </div>
 
-
-
+            
+            <a href="acceuilAdmin.php" class="bouton_retour">
+    <i class="fas fa-arrow-left"></i> Retour
+</a>
 
 
 <table class="calendar__table calendar__table--<?= $weeks; ?>weeks" >
@@ -72,6 +74,7 @@
     </tr>
         <?php endfor; ?>
     </table>
+    
     <a href="pageformajoutCreneau.php" class="calendar_button">+</a>
 
         </div>

@@ -27,6 +27,21 @@
 
 
 //var_dump($id1);
+if(isset($_SESSION['message'])) {
+    echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">';
+    echo $_SESSION['message'];
+    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+    echo '</div>';
+    unset($_SESSION['message']);
+}
+
+if(isset($_SESSION['suppression_message'])) {
+    echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">';
+    echo $_SESSION['suppression_message'];
+    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+    echo '</div>';
+    unset($_SESSION['suppression_message']);
+}
 
 include('connection.php');
 
