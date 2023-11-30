@@ -34,7 +34,7 @@
             <li><a class="dropdown-item" href="pageformajoutCreneau.php">Création creneau</a></li>
             <li><a class="dropdown-item" href="pageCalendar.php">Affichage creneau</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="traitementsupprimercreneau.php">Suppression creneau</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">

@@ -7,11 +7,11 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Creation jeux</title>
+    <title>Modification jeux</title>
 </head>
 <body>
 <?php
-    require 'navbar.html';
+    require('menuadmin.php');
     ?>
 <div class="container">
 <h1>Modification d'un Jeux </h1>
@@ -152,8 +152,9 @@ $q_update->execute();
 $q1_update->bindParam(':imagejeux', $imagejeux);
 $q1_update->bindParam(':id', $id);
 $q1_update->execute();
-//echo "Jeu modifiéé avec succès : " . $_POST['nomjeux'];
-  header("location:list.php");
+echo "Jeu modifiéé avec succès : " . $_POST['nomjeux'];
+ // header("location:list.php");
+ 
   }
   else {
     //echo"Probleme";

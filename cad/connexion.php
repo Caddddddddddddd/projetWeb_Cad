@@ -32,7 +32,7 @@ if (isset($_POST['envoyer'])) {
             $_SESSION['privilege'] = "membre";
             $_SESSION['PROFILE'] = $user;
             $_SESSION['id_user'] = $user['id_membre'];
-            $_SESSION['show_welcome_message'] = true;
+            
 
             header('Location: ../membre/accueilMembre.php');
             exit();

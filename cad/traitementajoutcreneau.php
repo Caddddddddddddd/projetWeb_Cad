@@ -79,7 +79,7 @@
                 header("location:list.php");        */  
              }
 
-             //header("location:pageCalendar.php");
+             header("location:pageCalendar.php");
          }
            else {
                 echo"Probleme";
