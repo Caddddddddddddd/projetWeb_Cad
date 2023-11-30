@@ -163,3 +163,5 @@ echo "Jeu modifiéé avec succès : " . $_POST['nomjeux'];
 ?>
 </body>
 </html>
+
+
