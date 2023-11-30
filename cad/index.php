@@ -33,10 +33,10 @@
          <!-- block stylesheets -->
        
 
-         <!-- block javascripts -->
+         
     
     </head>
-          
+           
     <body>
    
     <?php

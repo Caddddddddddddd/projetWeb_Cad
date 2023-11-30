@@ -2,7 +2,7 @@
     define('HOST','localhost');
     define('DB_NAME','projet');
     define('USER','root');
-    define('PASS',' ');
+    define('PASS','');
 
 
 

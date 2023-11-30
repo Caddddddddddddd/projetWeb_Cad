@@ -9,6 +9,13 @@
             <?php
             // Inclure le contenu de la nouvelle barre latérale ici
             require('menu_membre.php');
+            if (isset($_SESSION['message'])) {
+                echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">';
+                echo $_SESSION['message'];
+                echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                echo '</div>';
+                unset($_SESSION['message']);
+            }
             ?>
        
         <br>
@@ -61,10 +68,12 @@
                 echo '<td>' . $row['date_debut'] . '</td>';
                 echo '<td>' . $row['date_fin'] . '</td>';
                $id_creneau=$row['id_creneau'] ;
-               echo '<td><a href="traitement_inscription_creneau.php?idcreneau=' . $row['id_creneau'] . '">S\'inscrire</a></td>';
+               echo '<td><a href="traitement_inscription_creneau.php?idcreneau=' . $row['id_creneau'] . '" class="btn btn-success">S\'inscrire</a></td>';
+
 
               
-                echo '<td><a href="traitement_liste_joueurs.php?idcreneau=' . $id_creneau . '" >Liste</a></td>';
+               echo '<td><a href="traitement_liste_joueurs.php?idcreneau=' . $id_creneau . '" class="btn btn-info">Liste</a></td>';
+
          
                 echo '</tr>';
                 

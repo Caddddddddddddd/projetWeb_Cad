@@ -21,7 +21,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-     <a class="navbar-brand" href="index.php">
+     <a class="navbar-brand" href="accueilMembre.php">
               <img src="../images/board-game-logo_555017-125.jpg" alt="Logo" width="30" height="24">
             </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
